@@ -15,7 +15,8 @@ deployment of RAMSES and speed up progress towards production.
 
 ## Structure / Content / Metadata
 
-The main structure of the DB is not settled yet, but a number of principles and requirements have been formulated:
+The main structure of the DB is given further below, and a number of repo have been setup for this purpose.
+A number of principles and requirements have also been formulated:
 
 - The SLURM scripts ingested in the DB will be sourced from the community
 - Each script should be provided with metadata allowing quick and efficient understanding of the compute profile and context. A 
