@@ -3,7 +3,7 @@
 ########
 #HEADER
 ########
-ori_file_name=irene.sh
+ori_file_name=irene_rome.sh
 alt_file_name=
 db_file_name=
 db_path=
