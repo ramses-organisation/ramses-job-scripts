@@ -1,7 +1,47 @@
 # ramses-job-scripts
 # RAMSES SLURM DATABASE
 
-Draft document by Pierre OCVIRK, 19/09/2024
+- Draft document by Pierre OCVIRK, 19/09/2024
+- Updated 04/12/2024
+
+## QUICK SUMMARY: HOW TO SUBMIT YOUR SCRIPTS TO THE DATABASE
+
+If you are in a hurry, read only this!\
+The scripts are to be deposited here:\
+https://seafile.unistra.fr/d/7cf0c55d4a0447a8aba5/
+
+With the minimal mandatory header (only 11 easy header fields), the script should look like this:
+
+########\
+#HEADER\
+########
+
+ori_file_name=run_ramsesaton_summit_nobb_4096.lsf\
+cc_main_name=OLCF\
+sc_main_name=Summit\
+exec_year=2021\
+pi_name=Pierre OCVIRK\
+sim_queue=slurm\
+sim_nnodes=4096\
+sim_nmpi=131072\
+sim_ncpu=131072\
+sim_nthreads_total=131072\
+sim_cpu_compiler=pgi\
+
+#######\
+#SCRIPT\
+#######\
+#Your script goes here\
+#! /bin/bash\
+#begin LSF directives
+
+#BSUB -P AST031\
+#BSUB -W 24:00\
+#BSUB -nnodes 4096\
+#BSUB -alloc_flags gpumps\
+...
+
+A longer form, more detailed of the document and possible metadata follows below for the more patient reader.
 
 ## Context
 
@@ -46,7 +86,8 @@ Several metadata items have been identified and are presented in the table below
 | Computing center developed alt acronym | cc_alt_full | String, "" | Optional |
 | Supercomputer name main | sc_main_name | String, "" | Mandatory |
 | Supercomputer name alt | sc_alt_name | String, "" | Optional |
-| Execution date | exec_date | String, "dd-mm-yyyy" | Desirable |
+| Execution date | exec_date | String, "dd-mm-yyyy" | Optional |
+| Execution year | exec_year | String, "yyyy" | Mandatory |
 | Simulation project name main (e.g. short) | proj_main_name | String, "" | Desirable |
 | Simulation project name alt (e.g. long) | proj_alt_name | String, "" | Desirable |
 | Principal Investigator / author / uploader | pi_name | String, "" | Mandatory |
@@ -162,7 +203,3 @@ metadata of all the SLURM files, in a Python dictionary structure. Using this fi
 
 The structure for this will be a GitHub repo containing the DB data and a few Python scripts to read the metadata registry.
 
-## Miscellaneous Notes
-
-- Should we add metadata describing the physics of the simulation? No
-- What elements from simDM should we think about integrating? (https://arxiv.org/pdf/1402.4744)
