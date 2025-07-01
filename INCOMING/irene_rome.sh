@@ -14,6 +14,7 @@ cc_alt_full=
 sc_main_name=irene
 sc_alt_name=
 exec_date=01-11-2024
+exec_year=2024
 pi_name=Noé Brucy
 pi_email=
 sim_queue=slurm

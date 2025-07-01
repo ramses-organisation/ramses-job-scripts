@@ -10,6 +10,7 @@ cc_alt_full=
 sc_main_name=COSMA8
 sc_alt_name=
 exec_date=14-10-2024
+exec_year=2024
 proj_main_name=MEGATRON
 proj_alt_name=
 pi_name=Corentin Cadiou

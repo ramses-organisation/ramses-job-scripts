@@ -13,6 +13,7 @@ cc_alt_full=
 sc_main_name=Summit
 sc_alt_name=
 exec_date=21-01-2021
+exec_year=2021
 proj_main_name=Cosmic Dawn III
 proj_alt_name=CoDaIII
 pi_name=Pierre OCVIRK

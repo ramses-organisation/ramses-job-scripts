@@ -10,6 +10,7 @@ cc_alt_full=
 sc_main_name=LUMI
 sc_alt_name=
 exec_date=14-10-2024
+exec_year=2024
 proj_main_name=Vintergatan 2
 proj_alt_name=VG2
 pi_name=Corentin Cadiou
